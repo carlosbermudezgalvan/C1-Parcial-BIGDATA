@@ -58,6 +58,7 @@ jobs:
       - name: Pruebas Unitarias Pytest
         run: |
           #pytest
+          aws s3 ls
       - name: Despliegue de funciones con Zappa
         run: |
           source env/bin/activate
