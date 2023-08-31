@@ -42,3 +42,15 @@ jobs:
             aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
             aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
             aws-region: us-east-1
+      - name: Instalacion Requirements
+        run: |
+          pip install pytest
+          pip install virtualenv
+          virtualenv env
+          source env/bin/activate
+          pip install -r requirements.txt
+      - name: flake8
+        run: |
+          source env/bin/activate
+          flake8 download_wpage.py
+          flake8 extract_data.py
