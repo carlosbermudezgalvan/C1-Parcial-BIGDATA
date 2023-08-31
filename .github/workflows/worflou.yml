@@ -54,3 +54,11 @@ jobs:
           source env/bin/activate
           flake8 download_wpage.py
           flake8 extract_data.py
+      - name: Pruebas Unitarias Pytest
+        run: |
+          pytest
+      - name: Zappa
+        run: |
+          source env/bin/activate
+          zappa update dev
+          zappa update dev2
