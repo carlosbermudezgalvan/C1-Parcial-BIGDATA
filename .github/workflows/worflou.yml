@@ -60,5 +60,6 @@ jobs:
           #pytest
       - name: Despliegue de funciones con Zappa
         run: |
+          pip install -r requirements.txt
           zappa update dev1
           zappa update dev2
