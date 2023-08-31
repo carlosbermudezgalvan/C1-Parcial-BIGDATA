@@ -59,7 +59,7 @@ jobs:
         run: |
           #pytest
           aws s3 ls
-          python -version
+          python3 -version
       - name: Despliegue de funciones con Zappa
         run: |
           source env/bin/activate
