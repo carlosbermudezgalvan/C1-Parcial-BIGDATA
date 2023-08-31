@@ -58,8 +58,8 @@ jobs:
       - name: Pruebas Unitarias Pytest
         run: |
           #pytest
-      - name: Zappa
+      - name: Despliegue de funciones con Zappa
         run: |
           source env/bin/activate
-          zappa update dev
+          zappa update dev1
           zappa update dev2
