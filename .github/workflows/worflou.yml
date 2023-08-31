@@ -40,7 +40,7 @@ jobs:
         with:
             aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
             aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-            aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
+            aws-session-token: ${{secrets.AWS_SESSION_TOKEN }}
             aws-region: us-east-1
       - name: Instalacion Requirements
         run: |
@@ -60,6 +60,6 @@ jobs:
           #pytest
       - name: Despliegue de funciones con Zappa
         run: |
-          source env/bin/activate
-          zappa update dev1
-          zappa update dev2
+          #source env/bin/activate
+          #zappa update dev1
+          #zappa update dev2
