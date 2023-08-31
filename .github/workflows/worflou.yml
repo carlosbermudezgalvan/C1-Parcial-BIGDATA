@@ -60,6 +60,5 @@ jobs:
           #pytest
       - name: Despliegue de funciones con Zappa
         run: |
-          #source env/bin/activate
           zappa update dev1
           #zappa update dev2
