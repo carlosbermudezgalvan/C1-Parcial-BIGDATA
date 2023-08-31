@@ -1,0 +1,19 @@
+{
+    "dev1": {
+        "app_function": "download_wpage.lambda_handler",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "profile_name": "default",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "project_name": "C1-PARCIAL-BIGDATA",
+        "runtime": "python3.9",
+        "s3_bucket": "zappa-parcial1",
+        "events": [
+            {
+                "function": "download_wpage.lambda_handler",
+                "expression": "cron(0 12 * * ? *)"
+            }
+        ]
+    }
+}
