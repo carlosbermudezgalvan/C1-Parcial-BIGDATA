@@ -45,6 +45,7 @@ jobs:
       - name: Instalacion Requirements
         run: |
           pip install pytest
+          pip installboto3
           pip install virtualenv
           virtualenv env
           source env/bin/activate
