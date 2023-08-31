@@ -15,5 +15,26 @@
                 "expression": "cron(0 12 * * ? *)"
             }
         ]
+    },
+
+    "dev2": {
+        "app_function": "extract_data.lambda_handler_processing",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "profile_name": "default",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "project_name": "C1-PARCIAL-BIGDATA",
+        "runtime": "python3.9",
+        "s3_bucket": "zappa-parcial1",
+        "events": [
+            {
+                "function": "extract_data.lambda_handler_processing",
+                "expression": "cron(5 12 * * ? *)"
+            }
+        ]
     }
+
 }
+
+
