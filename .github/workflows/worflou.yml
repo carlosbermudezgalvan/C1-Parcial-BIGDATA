@@ -44,6 +44,7 @@ jobs:
             aws-region: us-east-1
       - name: Instalacion Requirements
         run: |
+          sudo apt-get install python3.9.13
           pip install virtualenv
           virtualenv env
           source env/bin/activate
